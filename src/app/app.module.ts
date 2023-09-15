@@ -10,7 +10,10 @@ import { ListReservationsComponent } from './components/dashboard/list-reservati
 import { ListCandidatsComponent } from './components/dashboard/list-candidats/list-candidats.component';
 import { MyExamDetailsComponent } from './components/dashboard/my-exam-details/my-exam-details.component';
 import { DashboardBoardComponent } from './components/dashboard/dashboard-board/dashboard-board.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PayTheExamComponent } from './components/dashboard/my-exam-details/pay-the-exam/pay-the-exam.component';
+import { ScheduleExamComponent } from './components/dashboard/my-exam-details/schedule-exam/schedule-exam.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +22,19 @@ import { DashboardBoardComponent } from './components/dashboard/dashboard-board/
     ListReservationsComponent,
     ListCandidatsComponent,
     MyExamDetailsComponent,
-    DashboardBoardComponent
+    DashboardBoardComponent,
+    ScheduleExamComponent,
+    PayTheExamComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

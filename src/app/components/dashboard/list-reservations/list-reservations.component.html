@@ -1,187 +1,135 @@
 <div class="relative overflow-x-auto sm:rounded-lg">
-    <!-- <app-table [tableHeader]="tableHeader" [tableData]="tableData" [tableHeaders]="tableHeaders"></app-table> -->
-    <div class="flex items-center justify-between p-4">
-    
-      <label for="table-search" class="sr-only">Search</label>
-      <div class="relative">
-        <div
-          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-        >
-          <svg
-            class="w-5 h-5 text-gray-500 dark:text-gray-400"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </div>
-  
-        <input
-          type="text"
-          id="table-search"
-          class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-green-300 focus:border-green-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-          placeholder="Search for Reservation (Client's CNE)"
-        />
-      </div>
-    </div>
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-      <thead
-        class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+  <!-- <app-table [tableHeader]="tableHeader" [tableData]="tableData" [tableHeaders]="tableHeaders"></app-table> -->
+  <div class="flex items-center justify-between p-4">
+    <label for="table-search" class="sr-only">Search</label>
+    <div class="relative">
+      <div
+        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
       >
-        <tr>
-          <!-- <th scope="col" class="px-6 py-3" *ngFor="let header of tableHeaders" >{{header}}</th> -->
-          <th scope="col" class="px-6 py-3">Nom Complet</th>
-          <th scope="col" class="px-6 py-3">Permis demandee</th>
-          <th scope="col" class="px-6 py-3">DoN</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+        <svg
+          class="w-5 h-5 text-gray-500 dark:text-gray-400"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <td class="px-6 py-4">Test test</td>
-          <td class="px-6 py-4">B</td>
-          <td class="px-6 py-4">12/02/1988</td>
-       
-        </tr>
-      </tbody>
-    </table>
-    <nav
-      class="flex items-center justify-between pt-4"
-      aria-label="Table navigation"
-    >
-      <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
-        >Showing
-        <span class="font-semibold text-gray-900 dark:text-white">1-10</span> of
-        <span class="font-semibold text-gray-900 dark:text-white"
-          >1000</span
-        ></span
-      >
-      <ul class="inline-flex -space-x-px text-sm h-8">
-        <li>
-          <a
-            href="#"
-            class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >Previous</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >1</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >2</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            aria-current="page"
-            class="flex items-center justify-center px-3 h-8 text-green-600 border border-gray-300 bg-green-50 hover:bg-green-100 hover:text-green-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
-            >3</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >4</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >5</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >Next</a
-          >
-        </li>
-      </ul>
-    </nav>
-  
-    <!--  -->
-  
-    <div
-      id="adduser-modal"
-      tabindex="-1"
-      aria-hidden="true"
-      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
-    >
-      <div class="relative w-full max-w-md max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-          <button
-            type="button"
-            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-            data-modal-hide="adduser-modal"
-          >
-            <svg
-              class="w-3 h-3"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-              />
-            </svg>
-            <span class="sr-only">Close modal</span>
-          </button>
-          <div class="px-6 py-6 lg:px-8">
-            <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-              Create new User
-            </h3>
-            <form class="space-y-6" action="#">
-              <div>
-                <label
-                  for="cin"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >CIN :
-                </label>
-                <input
-                  type="text"
-                  name="cin"
-                  id="cin"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="E09999"
-                  required
-                />
-              </div>
-              ...
-  
-              <button
-                type="submit"
-                class="w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-              >
-                Create
-              </button>
-            </form>
-          </div>
-        </div>
+          <path
+            fill-rule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
       </div>
+
+      <input
+        type="text"
+        [(ngModel)]="cneFilter"
+        (input)="applyFilters()"
+        id="table-search"
+        class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-green-300 focus:border-green-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+        placeholder="Search for Reservation (Client's CNE)"
+      />
     </div>
   </div>
-  
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <!-- <th scope="col" class="px-6 py-3" *ngFor="let header of tableHeaders" >{{header}}</th> -->
+        <th scope="col" class="px-6 py-3">Nom Complet</th>
+        <th scope="col" class="px-6 py-3">Permis demandee</th>
+        <th scope="col" class="px-6 py-3">CNE</th>
+        <th scope="col" class="px-6 py-3">Date!Heure</th>
+        <th scope="col" class="px-6 py-3">Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let item of filteredData.length > 0 ? filteredData : examData"
+        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+      >
+        <ng-container *ngIf="item !== 'empty'; else emptyRow">
+          <td class="px-6 py-4">{{ item.nomComplet }}</td>
+          <td class="px-6 py-4">{{ item.permisDemandee }}</td>
+          <td class="px-6 py-4">{{ item.cne }}</td>
+          <td class="px-6 py-4">{{ item.dateHeure }}</td>
+          <td class="px-6 py-4">{{ item.location }}</td></ng-container
+        >
+      </tr>
+      <ng-template #emptyRow>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <td colspan="4" class="px-6 py-4 text-center">
+            No result found For {{ cneFilter }}
+          </td>
+        </tr>
+      </ng-template>
+    </tbody>
+  </table>
+  <!-- <nav
+    class="flex items-center justify-between pt-4"
+    aria-label="Table navigation"
+  >
+    <span class="text-sm font-normal text-gray-500 dark:text-gray-400"
+      >Showing
+      <span class="font-semibold text-gray-900 dark:text-white">1-10</span> of
+      <span class="font-semibold text-gray-900 dark:text-white"
+        >1000</span
+      ></span
+    >
+    <ul class="inline-flex -space-x-px text-sm h-8">
+      <li>
+        <a
+          href="#"
+          class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >Previous</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >1</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >2</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          aria-current="page"
+          class="flex items-center justify-center px-3 h-8 text-green-600 border border-gray-300 bg-green-50 hover:bg-green-100 hover:text-green-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+          >3</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >4</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >5</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          >Next</a
+        >
+      </li>
+    </ul>
+  </nav> -->
+
+  <!--  -->
+</div>

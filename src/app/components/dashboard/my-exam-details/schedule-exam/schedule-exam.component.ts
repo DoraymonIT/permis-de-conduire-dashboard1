@@ -1,23 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { initFlowbite } from 'flowbite';
 
 @Component({
-  selector: 'app-my-exam-details',
-  templateUrl: './my-exam-details.component.html',
-  styleUrls: ['./my-exam-details.component.css'],
+  selector: 'app-schedule-exam',
+  templateUrl: './schedule-exam.component.html',
+  styleUrls: ['./schedule-exam.component.css'],
 })
-export class MyExamDetailsComponent implements OnInit {
-  onConfirmReschedule() {
-    this.Ispayed = true;
-    console.log('Go to Paye');
-    this.reSchedule = false;
-  }
-  onPaye() {
-    this.reSchedule = false;
-    console.log('Paye');
-    this.Ispayed = false;
-  }
-  Ispayed: boolean = false;
+export class ScheduleExamComponent implements OnInit {
   reSchedule: boolean = false;
   dateExam: Date = new Date();
   dateTime: any;
@@ -27,8 +15,9 @@ export class MyExamDetailsComponent implements OnInit {
     console.log(this.dateExam + ' : ' + this.dateTime);
     // }
   }
-  ngOnInit() {
-    initFlowbite();
+
+  constructor() {}
+  ngOnInit(): void {
     // Create a new Date object for the current time
     const now = new Date();
 

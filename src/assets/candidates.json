@@ -1,0 +1,17 @@
+[
+    {
+        "nomComplet": "Anoop",
+        "cne": "12345",
+        "permisDemandee": "C"
+    },
+    {
+        "nomComplet": "Anoop2",
+        "cne": "2345",
+        "permisDemandee": "B"
+    },
+    {
+        "nomComplet": "Anoop3",
+        "cne": "12347",
+        "permisDemandee": "A"
+    }
+]

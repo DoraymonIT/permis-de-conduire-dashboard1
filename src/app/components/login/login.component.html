@@ -1,62 +1,64 @@
 <div class="min-h-screen flex items-center justify-center bg-gray-login">
-    <div class="container mx-auto flex flex-col md:flex-row h-full">
-      <!-- Column 1 -->
-      <div class="w-full md:w-1/2 flex items-center justify-center">
-        <div class="w-full max-w-sm p-4 sm:p-6 md:p-8">
-          <h1
-            class="text-xl py-4 font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
-          >
-            Welcome te P.C.D
-          </h1>
-          <form class="space-y-6" (submit)="login()">
-            <!-- <img src="../assets/logog-removebg-preview1.png" alt="" />
-                  <h5>
-                    Welcome back
-                  </h5>
-                  <p>Please enter your details.</p> -->
-            <div>
-              <label
-                for="email"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Your email</label
-              >
-              <input
-                type="email"
-                name="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-300 focus:border-green-300 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                placeholder="name@company.com"
-              />
-            </div>
-            <div>
-              <label
-                for="password"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Your password</label
-              >
-              <input
-                type="password"
-                name="password"
-                placeholder="••••••••"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-300 focus:border-green-300 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-              />
-            </div>
-        
-            <button
-              type="submit"
-              class="w-full text-white bg-green-700 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-600"
+  <div class="container mx-auto flex flex-col md:flex-row h-full">
+    <!-- Column 1 -->
+    <div class="w-full md:w-1/2 flex items-center justify-center">
+      <div class="w-full max-w-sm p-4 sm:p-6 md:p-8">
+        <h1
+          class="text-xl py-4 font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
+        >
+          Welcome to P.C.D
+        </h1>
+        <form class="space-y-6" [formGroup]="loginForm" (submit)="login()">
+          <p>Please enter your details.</p>
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Your email</label
             >
-              Sign in
-            </button>
-        
-          </form>
-        </div>
+            <input
+              type="email"
+              name="email"
+              formControlName="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-300 focus:border-green-300 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="name@company.com"
+            />
+          </div>
+          <div>
+            <label
+              for="password"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Your password</label
+            >
+            <input
+              type="password"
+              name="password"
+              formControlName="password"
+              placeholder="••••••••"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-300 focus:border-green-300 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full text-white bg-green-700 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-600"
+          >
+            Sign in
+          </button>
+        </form>
       </div>
-      <div class="w-full md:w-1/2 flex items-center justify-center">
-        <!-- <img src="../assets/4231d64cc284a40230457609b720c18f.jpg" /> -->
-        <img
-          class="rounded-lg"
-          src="../assets/99d9be51063993.58e1ec3db7b4f.gif"
-        />
-      </div>
+      <!-- <div class="w-full max-w-sm p-4 sm:p-6 md:p-8">
+        <p> <b>Admin</b> : admin@admin.com / admin</p>
+        <p> <b>Candidate</b> : candidate@candidate.com / candidate</p>
+      </div> -->
+    </div>
+
+    <div class="w-full md:w-1/2 flex items-center justify-center">
+      <!-- <img src="../assets/4231d64cc284a40230457609b720c18f.jpg" /> -->
+      <img
+        class="rounded-lg"
+        src="../assets/99d9be51063993.58e1ec3db7b4f.gif"
+      />
     </div>
   </div>
+</div>

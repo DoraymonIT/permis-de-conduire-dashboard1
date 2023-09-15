@@ -1,0 +1,70 @@
+<div class="flex justify-center items-center">
+  <p class="m-5">
+    This is the availabe date , you can reschedule or you can pay to schedule
+    this date if you're okay with it .
+  </p>
+</div>
+<div class="flex justify-center items-center" *ngIf="!reSchedule">
+  <div class="bg-white shadow-md rounded-lg overflow-hidden w-full max-w-sm">
+    <div class="p-4">
+      <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+      <p class="text-gray-600">Driving Exam Details</p>
+      <div class="mt-4">
+        <div class="flex justify-between">
+          <span class="text-gray-600">Available Exam Date:</span>
+          <span class="font-semibold">{{
+            dateExam | date : "dd-MM-yyyy"
+          }}</span>
+        </div>
+        <div class="flex justify-between mt-2">
+          <span class="text-gray-600">Location:</span>
+          <span class="font-semibold">City Driving School</span>
+        </div>
+        <div class="flex justify-between mt-2">
+          <span class="text-gray-600">Time:</span>
+          <span class="font-semibold">{{
+            parseTime(dateTime) | date : "HH:mm"
+          }}</span>
+        </div>
+      </div>
+      <div class="mt-4">
+        <button
+          (click)="onReschedule()"
+          class="mr-2 text-white bg-green-700 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-600"
+        >
+          Reschedule
+        </button>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>
+<div class="flex justify-center items-center" *ngIf="reSchedule">
+  <!-- Reschedule Section -->
+  <div v-if="showReschedule" class="p-4 bg-gray-100">
+    <h3 class="text-lg font-semibold text-gray-800">ReSchedule Exam</h3>
+    <div class="mt-4">
+      <input
+        [(ngModel)]="dateExam"
+        type="date"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-300 focus:border-green-300 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+        placeholder="Select New Date"
+      />
+      <br />
+      <input
+        type="time"
+        [(ngModel)]="dateTime"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-300 focus:border-green-300 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+        placeholder="Select New Date"
+      />
+      <div class="mt-4">
+        <button
+          (click)="onReschedule()"
+          class="w-full text-white bg-green-700 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-600"
+        >
+          Confirm Reschedule
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
